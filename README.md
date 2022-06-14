@@ -1,31 +1,38 @@
 # Synology-Bridging
 
-## Enable vSwitch bridging between two Ethernet ports on Synology NAS
-
 This script enables you to create a network bridge between two Ethernet ports on
-your Synology NAS.
+your Synology NAS. As it works right now, it will connect ports 0-3 to port 4,
+but it should be easily customizable, and will be more flexible soon.
 
 ## Prerequisites
 
 - DSM >= 6.1
 - A Synology NAS with at least two Ethernet ports
 - Administrator account on DSM
+- Open vSwitch enabled
+
+![](1.png)
 
 ## Instructions
 
 - Upload the script to an arbitrary folder (preferably one that only
-  Administrators can change)
+  Administrators can edit)
 - Launch Control Panel on DSM and go to Task Scheduler
 - Click the “Create” button on the top. Select “Triggered Task” → ”User-defined
   script”
-- Type any title you wish
-- Choose the “Enable Task” box
+- Type any title you wish and select the `root` user
+
+![](2.png)
+
 - Move to “Task Setting” tab
-- Type into the text box:
+- Type (or copy-paste) into the text box:
 
 ```
 bash /path/to/vswitch_bridge
 ```
 
+![](3.png)
+
 - Click the “OK” button
-- Reboot if you want to
+- Choose the “Enable Task” box
+- Reboot (or run it once manually)
