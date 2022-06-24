@@ -2,7 +2,14 @@
 
 This script enables you to create a network bridge between two Ethernet ports on
 your Synology NAS. As it works right now, it will connect ports 0-3 to port 4,
-but it should be easily customizable, and will be more flexible soon.
+but it should be easily customizable.
+
+## Don't
+
+Using your NAS as a switch might work, but it might _super_ not. For us it
+worked for a while, but every now and then it would just break. If you aren't
+really broke and need to save the 200$ for a switch, you probably should not do
+this.
 
 ## Prerequisites
 
